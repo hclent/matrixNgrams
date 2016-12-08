@@ -1,0 +1,153 @@
+format version: 5
+output mode:
+1 items
+0 -> single
+output directories:
+1 items
+output dir -> /Users/hclent/Desktop/matrixNgrams/target/scala-2.11/classes
+compile options:
+0 items
+javac options:
+0 items
+compiler version:
+1 items
+0 -> 2.11.6
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> true
+products:
+5 items
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> /Users/hclent/Desktop/matrixNgrams/target/scala-2.11/classes/ngramMatrix$$anonfun$fillDense$1$$anonfun$apply$mcVI$sp$1.class
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> /Users/hclent/Desktop/matrixNgrams/target/scala-2.11/classes/ngramMatrix$$anonfun$fillDense$1.class
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> /Users/hclent/Desktop/matrixNgrams/target/scala-2.11/classes/ngramMatrix$$anonfun$ngrams$1$$anonfun$apply$mcVI$sp$2.class
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> /Users/hclent/Desktop/matrixNgrams/target/scala-2.11/classes/ngramMatrix$$anonfun$ngrams$1.class
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> /Users/hclent/Desktop/matrixNgrams/target/scala-2.11/classes/ngramMatrix.class
+binary dependencies:
+3 items
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/rt.jar
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> /Users/hclent/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.6.jar
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> /Users/hclent/.ivy2/cache/org.scalanlp/breeze_2.11/jars/breeze_2.11-0.12.jar
+direct source dependencies:
+0 items
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+0 items
+member reference external dependencies:
+0 items
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+5 items
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> ngramMatrix
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> ngramMatrix$$anonfun$fillDense$1
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> ngramMatrix$$anonfun$fillDense$1$$anonfun$apply$mcVI$sp$1
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> ngramMatrix$$anonfun$ngrams$1
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> ngramMatrix$$anonfun$ngrams$1$$anonfun$apply$mcVI$sp$2
+used names:
+62 items
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> +
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> +=
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> <init>
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> <repeated>
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> A
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> Any
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> AnyRef
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> ArrayBuffer
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> CanSlice2
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> ClassTag
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> DenseMatrix
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> Function1
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> Int
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> IntZero
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> Matrix
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> Nothing
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> Object
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> Predef
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> Random
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> Range
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> Result
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> RichInt
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> Slice1
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> Slice2
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> T
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> Throwable
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> U
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> Unit
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> V
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> Zero
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> apply
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> breeze
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> canSliceColsAndRows
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> collection
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> cols
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> copy
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> fillDense
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> foreach
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> i
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> intWrapper
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> j
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> linalg
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> materializeClassTag
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> mutable
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> n
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> nextInt
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> ngramMatrix
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> ngrams
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> ngramsList
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> numerics
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> package
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> println
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> r
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> rows
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> scala
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> storage
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> until
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> update
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> util
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> x
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> y
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> zeros
+product stamps:
+5 items
+/Users/hclent/Desktop/matrixNgrams/target/scala-2.11/classes/ngramMatrix$$anonfun$fillDense$1$$anonfun$apply$mcVI$sp$1.class -> lastModified(1481218688000)
+/Users/hclent/Desktop/matrixNgrams/target/scala-2.11/classes/ngramMatrix$$anonfun$fillDense$1.class -> lastModified(1481218688000)
+/Users/hclent/Desktop/matrixNgrams/target/scala-2.11/classes/ngramMatrix$$anonfun$ngrams$1$$anonfun$apply$mcVI$sp$2.class -> lastModified(1481218688000)
+/Users/hclent/Desktop/matrixNgrams/target/scala-2.11/classes/ngramMatrix$$anonfun$ngrams$1.class -> lastModified(1481218688000)
+/Users/hclent/Desktop/matrixNgrams/target/scala-2.11/classes/ngramMatrix.class -> lastModified(1481218688000)
+source stamps:
+1 items
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> hash(df2ccd49ab2470de9798fe9c1c81a3b399b2d24f)
+binary stamps:
+3 items
+/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/rt.jar -> lastModified(1418879070000)
+/Users/hclent/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.6.jar -> lastModified(1424912463000)
+/Users/hclent/.ivy2/cache/org.scalanlp/breeze_2.11/jars/breeze_2.11-0.12.jar -> lastModified(1452974058000)
+class names:
+3 items
+/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home/jre/lib/rt.jar -> java.lang.Object
+/Users/hclent/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.6.jar -> scala.Unit
+/Users/hclent/.ivy2/cache/org.scalanlp/breeze_2.11/jars/breeze_2.11-0.12.jar -> breeze.linalg.DenseMatrix
+internal apis:
+1 items
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwehBsIAAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAB1cQB+AAkAAAAYc3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwb+loUnQABm5vdGlmeXNxAH4ADIPBLOt0AAR3YWl0c3EAfgAM+da8v3QADSRhc0luc3RhbmNlT2ZzcQB+AAw/g7YxdAALbmdyYW1NYXRyaXhzcQB+AAysR7IOdAAJbWFrZURlbnNlc3EAfgAMRGGpD3QABmVxdWFsc3NxAH4ADNfUszh0AAZuZ3JhbXNzcQB+AAwtBgc/dAAMYXNJbnN0YW5jZU9mc3EAfgAMHWI+O3QADHN5bmNocm9uaXplZHNxAH4ADL9gO0R0AA0kaXNJbnN0YW5jZU9mc3EAfgAMDX9YYXQACW5vdGlmeUFsbHNxAH4ADJc9OxR0AAlmaWxsRGVuc2VzcQB+AAxVsPlldAAMaXNJbnN0YW5jZU9mc3EAfgAMfGK6PHQABjxpbml0PnNxAH4ADE2dMhN0AAI9PXNxAH4ADLz8xEd0AAVjbG9uZXNxAH4ADCNjEpF0AAh0b1N0cmluZ3NxAH4ADJRyzrx0AAIhPXNxAH4ADEc6/890AAhnZXRDbGFzc3NxAH4ADMwvWu90AAJuZXNxAH4ADDbor0h0AAJlcXNxAH4ADJ8jv8J0AAIjI3NxAH4ADAo91hR0AAhmaW5hbGl6ZXNxAH4ADFZqbaV0AAhoYXNoQ29kZXNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AEd4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgANeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc5fnYdwTJnuzAgABQgAFZmxhZ3N4cABxAH4AFXVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQACENsYXNzRGVmdXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyACF4c2J0aS5hcGkuQWJzdHJhY3RMYXp5JFN0cmljdExhenkNZhxrKRYquAIAAUwABXZhbHVldAASTGphdmEvbGFuZy9PYmplY3Q7eHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwc3EAfgBec3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AEdMAAlpbmhlcml0ZWRxAH4AR0wAB3BhcmVudHNxAH4AR3hxAH4AY3NxAH4AXnVxAH4AQgAAAABzcQB+AF51cQB+AEIAAAAAc3EAfgBedXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAJzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgBidAAGT2JqZWN0c3IAE3hzYnRpLmFwaS5TaW5nbGV0b278p1/4z1bkRgIAAUwABHBhdGh0ABBMeHNidGkvYXBpL1BhdGg7eHEAfgBic3IADnhzYnRpLmFwaS5QYXRomz1cCM6lJ4QCAAFbAApjb21wb25lbnRzdAAaW0x4c2J0aS9hcGkvUGF0aENvbXBvbmVudDt4cHVyABpbTHhzYnRpLmFwaS5QYXRoQ29tcG9uZW50O0PaCXQtZxZ0AgAAeHAAAAADc3IADHhzYnRpLmFwaS5JZJgybIs3U8RAAgABTAACaWRxAH4ADXhyABd4c2J0aS5hcGkuUGF0aENvbXBvbmVudF+aIlsuhp+8AgAAeHB0AARqYXZhc3EAfgB7dAAEbGFuZ3NyAA54c2J0aS5hcGkuVGhpc9sJ7abMWkBcAgAAeHEAfgB8c3EAfgBvdAADQW55c3EAfgBzc3EAfgB2dXEAfgB5AAAAAnNxAH4Ae3QABXNjYWxhcQB+AIJ1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAHNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWN+Db891cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+AA1MAA9zb3VyY2VEaXJlY3RvcnlxAH4ADXhwdAA8L1VzZXJzL2hjbGVudC9EZXNrdG9wL21hdHJpeE5ncmFtcy90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAU3yzNSaskcN6XmP6cHIGjs5my0k8=
+external apis:
+0 items
+source infos:
+1 items
+/Users/hclent/Desktop/matrixNgrams/src/main/scala/ngram1.scala -> 
+AAAAAAAAAAA=
+compilations:
+2 items
+0 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWNYgTfR1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAPC9Vc2Vycy9oY2xlbnQvRGVza3RvcC9tYXRyaXhOZ3JhbXMvdGFyZ2V0L3NjYWxhLTIuMTEvY2xhc3Nlc3QAAS8=
+1 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWN+Db891cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAPC9Vc2Vycy9oY2xlbnQvRGVza3RvcC9tYXRyaXhOZ3JhbXMvdGFyZ2V0L3NjYWxhLTIuMTEvY2xhc3Nlc3QAAS8=
