@@ -81,9 +81,6 @@ class ngramMatrix {
 		return averageArray
 	}
 
-
-
-
 	def resultsMatrix(M: breeze.linalg.DenseMatrix[Double], averages: ArrayBuffer[Double], n:Int): breeze.linalg.DenseMatrix[Double] = {
 		//make results matrix from dimensions of old matrix
 		var dim = (M.rows, M.cols)
@@ -133,29 +130,11 @@ class ngramMatrix {
 // println(R)
 // println("done!")
 
-//  ######### graveyard ##################   
 
-	//Initialize a sparse matrix with one value
-	// def makeSparse(x: Int, y: Int, row: Int, column: Int): breeze.linalg.CSCMatrix[Double] = {
-	// 	val builder = new CSCMatrix.Builder[Double](rows=x, cols=y)
-	// 	builder.add(row, column, 1.0) //this gives the location of the 1; rows down, columns over
-	// 	val sparseMatrix = builder.result()
-	// 	return sparseMatrix
-	// }
+// what are the operations on the matricies that we want to support?
+
+// store sums like that 
+
+// id iy rnyitrly indifr? outside?
 
 
-	//fill sparse matrix with values
-	//problem: this just makes it COMPLETELY dense, still want a sparse matrix, just more values...
-	// def fillSparse(Matrix:breeze.linalg.CSCMatrix[Double]): breeze.linalg.CSCMatrix[Double] = {
-	// 	val rndm = new scala.util.Random(10)
-	// 	for(i <-0 until Matrix.rows)
-	// 		for(j <- 0 until Matrix.cols)
-	// 			Matrix(i,j) = rndm.nextInt
-	// 	return Matrix
-	// }
-
-	//sparse2dense
-	// def sparse2dense(X:breeze.linalg.CSCMatrix[Double]): breeze.linalg.DenseMatrix[Double] = {
-	// 	val dMatrix = X.toDenseMatrix
-	// 	return dMatrix
-	// }
