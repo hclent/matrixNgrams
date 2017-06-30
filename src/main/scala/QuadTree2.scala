@@ -1,23 +1,21 @@
 case class Rectangle (minx: Int, maxx: Int, miny: Int, maxy: Int)
 
-abstract class QuadTree(val value: Int, val rec: Rectangle)
+abstract class QuadTree(val rec: Rectangle)
 
-case class Node (override val value : Int, nw : QuadTree, ne: QuadTree, sw: QuadTree, se: QuadTree, override val rec: Rectangle) extends QuadTree(value, rec)
-case class Leaf (override val value : Int, override val rec: Rectangle) extends QuadTree(value, rec)
-case class Empty (override val value: Int, override val rec: Rectangle) extends QuadTree(value, rec)
+case class Node (value : Int, nw : QuadTree, ne: QuadTree, sw: QuadTree, se: QuadTree, override val rec: Rectangle) extends QuadTree(rec)
+case class Leaf (value : Int, override val rec: Rectangle) extends QuadTree(rec)
+case class Empty (value: Int, override val rec: Rectangle) extends QuadTree(rec)
 
 
-//Do two rectangles overlap, where r1 overlaps r2 **OR** r2 overlaps r1
-//Basically the rectangles will not overlap if they don't share any of the same numbers in their ranges  
+//Do two rectangles overlap?
+//Basically the rectangles will not overlap if they don't share any of the same numbers in their ranges 
+//NB: these are INCLUSIVE!!!  n                                                                    
 def rectanglesOverlap(r1: Rectangle, r2:Rectangle): Boolean = {
   r2 match {
-     //In English: if r2's minx OR miny are not anywhere in the range of r1's x-axis, then there's no overlap along the x-axis
      //If the range of r1's x-axis does NOT contain anything from r2's x-axis, they don't overlap
-     case x_overlap1 if (! (  (r1.minx to r1.maxx) intersect (r2.minx to r2.maxx) ) ) => false //where r1 is larger rectangle 
-     case y_overlap1 if (! (  (r1.miny to r1.maxy) intersect (r2.miny to r2.maxy) ) ) => false
+     case x_overlap1 if (! (  ((r1.minx to r1.maxx) intersect (r2.minx to r2.maxx)).nonEmpty ) ) => false //where r1 is larger rectangle 
+     case y_overlap1 if (! (  ((r1.miny to r1.maxy) intersect (r2.miny to r2.maxy)).nonEmpty ) ) => false
      //If the range of r2's x-axis does NOT contain anything from r1's x-axis, they don't overlap
-     case x_overlap2 if (! (  (r2.minx to r2.maxx) intersect (r1.minx to r1.maxx)) ) => false //where r2 is larger rectangle
-     case y_overlap2 if (! (  (r2.miny to r2.maxy) intersect (r1.miny to r1.maxy) ) ) => false
      case _ => true
   }
 }
@@ -37,23 +35,32 @@ def rectangleInside(r1: Rectangle, r2: Rectangle): Boolean = {
   }
 }
 
+def example(foo: Int): Boolean = {
+  if (foo % 2 == 1) {
+    println("ODD!")
+    true
+  } else {
+    false
+  }
+}
 
-
-def queryBoolean(query: Rectangle, t: QuadTree): Boolean = {
+def queryBoolean2(query: Rectangle, t: QuadTree): Boolean = {
   //Step 1: check to see if the query overlaps the QT
   if (!rectanglesOverlap(query, t.rec) ) {
     println("Query not in QT!!")
     false
   } else {
-      println("Query overlaps QT")
+      println("Query overlaps QT. Maybe matches... ")
       t match { //given a QT, check node or leaf
         case Node(v, nw, ne, sw, se, rec) => //if Node, check all nw, ne, and so on
           println("Node")
-          queryBoolean(query, nw)
-          queryBoolean(query, ne)
-          queryBoolean(query, sw)
-          queryBoolean(query, se)
-          true 
+
+
+
+          queryBoolean2(query, nw) || queryBoolean2(query, ne) || queryBoolean2(query, sw) || queryBoolean2(query, se)
+          //NEED TO DO SOMETHING WITH THEEEESE
+
+
         case Leaf(v, rec) => //if leaf
           println("Leaf") 
           if (v!= 0) {   //check to see that the leaf isn't empty/numm
@@ -88,10 +95,10 @@ def querySum(query: Rectangle, t: QuadTree): Int = {
   //   }
   // }
   //Step2: check to see if the query overlaps the QT at all
-  if (!rectangleInside(query, t.rec)) {
-    println("doesn't overlap yo")
+  if (!rectanglesOverlap(query, t.rec)) {
+    println("doesn't overlap yo") //base case: doesn't overlap
     0
-  } else {
+  } else { //else: it overlaps! 
     println("Query overlaps QT")
     // check for Node, Leaf, empty
     t match {
@@ -105,28 +112,27 @@ def querySum(query: Rectangle, t: QuadTree): Int = {
         println("EMPTY")
         0
     }
-  // Step3 : query doesn't overlapp QT, return 0
   } 
-}
+}  
 
 
 
 
 
-val q1 = Rectangle(1, 18, 1, 18) 
-val q2 = Rectangle(1,8,8,16) 
+val q1 = Rectangle(0, 15, 0, 15) 
+val q2 = Rectangle(0,8,9,17) 
 val q3 = Rectangle(20,30,20,30) //non-overlapping rectangle -- 0
-val q4 = Rectangle(1,16,1,16) //same size rectangle 
-val q5 = Rectangle(8,16,1,8) //se -- 1
+val q4 = Rectangle(0,16,0,16) //same size rectangle 
+val q5 = Rectangle(9,16,0,8) //se -- 1
 val tree1 = Node(13, 
                 Node(12,
-                  Leaf(7,Rectangle(1,4,12,16)),
-                  Leaf(3,Rectangle(4,8,12,16)),
-                  Leaf(2,Rectangle(1,4,8,12)),
-                  Empty(0,Rectangle(4,8,8,12)), Rectangle(1,8,8,16)),
-                Empty(0,Rectangle(8,16,8,16)),
-                Empty(0,Rectangle(1,8,1,8)),
-                Leaf(1,Rectangle(8,16,1,8)), Rectangle(1,16,1,16))
+                  Leaf(7,Rectangle(0,3,12,15)),
+                  Leaf(3,Rectangle(4,7,12,15)),
+                  Leaf(2,Rectangle(0,3,8,12)),
+                  Empty(0,Rectangle(4,7,8,12)), Rectangle(0,7,8,15)),
+                Empty(0,Rectangle(8,15,8,15)),
+                Empty(0,Rectangle(0,7,0,7)),
+                Leaf(1,Rectangle(8,15,0,7)), Rectangle(0,15,0,15))
 
 
 
