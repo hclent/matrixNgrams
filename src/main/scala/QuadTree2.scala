@@ -35,32 +35,34 @@ def rectangleInside(r1: Rectangle, r2: Rectangle): Boolean = {
   }
 }
 
-def example(foo: Int): Boolean = {
-  if (foo % 2 == 1) {
-    println("ODD!")
-    true
-  } else {
-    false
-  }
-}
+// def example(foo: Int): Boolean = {
+//   if (foo % 2 == 1) {
+//     println("ODD!")
+//     true
+//   } else {
+//     false
+//   }
+// }
 
 def queryBoolean2(query: Rectangle, t: QuadTree): Boolean = {
   //Step 1: check to see if the query overlaps the QT
-  if (!rectanglesOverlap(query, t.rec) ) {
-    println("Query not in QT!!")
-    false
+  if (rectangleInside(query, t.rec)) {
+    println("Query entirely covers QT. Return True")
+    t match {
+      case Node(v, nw, ne, sw, se, rec) => true
+      case Leaf(v, rec) => v != 0
+      case Empty(v, rec) => false
+    }
   } else {
+    if (!rectanglesOverlap(query, t.rec) ) {
+      println("Query not in QT!!")
+      false
+    } else {
       println("Query overlaps QT. Maybe matches... ")
       t match { //given a QT, check node or leaf
         case Node(v, nw, ne, sw, se, rec) => //if Node, check all nw, ne, and so on
           println("Node")
-
-
-
           queryBoolean2(query, nw) || queryBoolean2(query, ne) || queryBoolean2(query, sw) || queryBoolean2(query, se)
-          //NEED TO DO SOMETHING WITH THEEEESE
-
-
         case Leaf(v, rec) => //if leaf
           println("Leaf") 
           if (v!= 0) {   //check to see that the leaf isn't empty/numm
@@ -74,7 +76,7 @@ def queryBoolean2(query: Rectangle, t: QuadTree): Boolean = {
       }
     } 
   }
-
+}
 
 
 
@@ -82,121 +84,53 @@ def queryBoolean2(query: Rectangle, t: QuadTree): Boolean = {
 //Need to check if the qt is entirely inside the range 
 def querySum(query: Rectangle, t: QuadTree): Int = {
   //Step 1: check to see if the query engulfs the entire QT
-  // breakable {
-  // if (rectangleInside(query, t.rec)) {
-  //     println("Query entirely covers QT. Return value")
-  //     t match {
-  //       case Node(v, nw, ne, sw, se, rec) => v
-  //       case Leaf(v, rec) => v
-  //       case Empty(v, rec) => v
-  //     }
-  //     println("BREAK")
-  //     break
-  //   }
-  // }
-  //Step2: check to see if the query overlaps the QT at all
-  if (!rectanglesOverlap(query, t.rec)) {
-    println("doesn't overlap yo") //base case: doesn't overlap
-    0
-  } else { //else: it overlaps! 
-    println("Query overlaps QT")
-    // check for Node, Leaf, empty
+  if (rectangleInside(query, t.rec)) {
+    println("Query entirely covers QT. Return value")
     t match {
-      case Node(v, nw, ne, sw, se, rec) =>
-        println("Node")
-        querySum(query, nw) + querySum(query, ne) + querySum(query, sw)+ querySum(query, se)
-      case Leaf(v, rec) => 
-        println("LEAF")
-        v
-      case Empty(v, rec) => 
-        println("EMPTY")
-        0
+      case Node(v, nw, ne, sw, se, rec) => v
+      case Leaf(v, rec) => v
+      case Empty(v, rec) => v
     }
-  } 
+  } else {
+    //Step2: check to see if the query overlaps the QT at all
+    if (!rectanglesOverlap(query, t.rec)) {
+      println("doesn't overlap yo") //base case: doesn't overlap
+      0
+    } else { //else: it overlaps! 
+      println("Query overlaps QT")
+      // check for Node, Leaf, empty
+      t match {
+        case Node(v, nw, ne, sw, se, rec) =>
+          println("Node")
+          querySum(query, nw) + querySum(query, ne) + querySum(query, sw)+ querySum(query, se)
+        case Leaf(v, rec) => 
+          println("LEAF")
+          v 
+        case Empty(v, rec) => 
+          println("EMPTY")
+          0
+      }
+    }
+  }
 }  
 
 
 
 
 
-val q1 = Rectangle(0, 15, 0, 15) 
-val q2 = Rectangle(0,8,9,17) 
-val q3 = Rectangle(20,30,20,30) //non-overlapping rectangle -- 0
-val q4 = Rectangle(0,16,0,16) //same size rectangle 
-val q5 = Rectangle(9,16,0,8) //se -- 1
-val tree1 = Node(13, 
-                Node(12,
-                  Leaf(7,Rectangle(0,3,12,15)),
-                  Leaf(3,Rectangle(4,7,12,15)),
-                  Leaf(2,Rectangle(0,3,8,12)),
-                  Empty(0,Rectangle(4,7,8,12)), Rectangle(0,7,8,15)),
-                Empty(0,Rectangle(8,15,8,15)),
-                Empty(0,Rectangle(0,7,0,7)),
-                Leaf(1,Rectangle(8,15,0,7)), Rectangle(0,15,0,15))
+// val q1 = Rectangle(0, 15, 0, 15) 
+// val q2 = Rectangle(0,8,9,17) //nw quadrant plus some stuff
+// val q3 = Rectangle(20,30,20,30) //non-overlapping rectangle -- 0
+// val q4 = Rectangle(0,16,0,16) //same size rectangle 
+// val q5 = Rectangle(9,16,0,8) //se -- 1
 
+// val tree2 = Node(13, 
+//                 Node(12,
+//                   Leaf(7,Rectangle(0,3,12,15)), 
+//                   Leaf(3,Rectangle(4,7,12,15)),
+//                   Leaf(2,Rectangle(0,3,8,11)), //changed ymax to 11 so it doesnt overlap with nw leaf
+//                   Empty(0,Rectangle(4,7,8,11)), Rectangle(0,7,8,15)), //changed ymax to 11 so it doesn't overlap with ne leaf
+//                 Empty(0,Rectangle(8,15,8,15)),
+//                 Empty(0,Rectangle(0,7,0,7)),
+//                 Leaf(1,Rectangle(8,15,0,7)), Rectangle(0,15,0,15))
 
-
-// Reads tree recursively
-// Can crash on tall trees
-// def inorder_recursive(t : QuadTree) {
-//   t match {
-//     case Node(v, nw, ne, sw, se) =>
-//       print("Node: ")
-//       print("%d ".format(v))
-//       inorder_recursive(nw)
-//       inorder_recursive(ne)
-//       inorder_recursive(sw)
-//       inorder_recursive(se)
-
-//     case Leaf(v) =>
-//       print("Leaf: ")
-//       print("%d ".format(v))
-//   }
-// }
-
-// //Reads tree iteravely. Memory efficient
-// def inorder_iterative(t : QuadTree) {
-//   val st = Stack[QuadTree]()
-//   st.push(t)
-//   while (!st.isEmpty) {
-//     st.pop() match {
-//       case Node(v, nw, ne, sw, se) =>
-//         print("Node: ")
-//         st.push(nw)
-//         st.push(ne)
-//         st.push(sw)
-//         st.push(se)
-//         st.push(Leaf(v))
-//       case Leaf(v) =>
-//         print("Leaf: ")
-//         print("%d ".format(v))
-//     }
-//   }
-// }
-
-// // Program entry point.
-// object Main {
-//   def main(query: Range) {
-    
-//     val t = Node(13,
-//                   Node(12,
-//                     Leaf(7,Rectangle(1,4,12,16)),
-//                     Leaf(3,Rectangle(4,8,12,16)),
-//                     Leaf(2,Rectangle(1,4,8,12)),
-//                     Empty(0,Rectangle(4,8,8,12)),Rectangle(1,8,8,16)),
-//                   Empty(0,Rectangle(8,16,8,16)),
-//                   Empty(0,Rectangle(1,8,1,8)),
-//                   Leaf(1,Rectangle(8,16,1,8)), Rectangle(1,16,1,16))
-
-//     println("inorder_recursive:")
-//     inorder_recursive(t)
-//     println("\ninorder_iterative:")
-//     inorder_iterative(t)ßß
-//   }
-// }
-
-//Main.main(Array(1,2,3,4))
-
-
-//val emptyTree = Node(13, Empty(0, Rectangle(1, 8, 8, 16)), Empty(0, Rectangle(8, 16, 8, 16)),  Empty(0, Rectangle(1, 8, 1, 8)), Empty(0, Rectangle(8, 16, 1, 8)), Rectangle(1, 16, 1, 16))
-//val tree1 = Node(13,Node(12,Leaf(7,Rectangle(1,4,12,16)),Leaf(3,Rectangle(4,8,12,16)),Leaf(2,Rectangle(1,4,8,12)),Empty(0,Rectangle(4,8,8,12)),Rectangle(1,8,8,16)),Empty(0,Rectangle(8,16,8,16)),Empty(0,Rectangle(1,8,1,8)),Leaf(1,Rectangle(8,16,1,8)),Rectangle(1,16,1,16))
